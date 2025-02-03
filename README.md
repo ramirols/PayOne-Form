@@ -22,4 +22,3 @@ Luego, el proyecto debería estar corriendo en ```http://localhost:3002```
 
 # Desarrollado por:
 - Ramiro Ls
-- Yordan Developer
