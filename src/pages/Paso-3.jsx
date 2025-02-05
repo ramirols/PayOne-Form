@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { CheckCircle } from "lucide-react";
@@ -9,6 +9,15 @@ import PlinIcon from "../assets/plin.png";
 import { FaCcVisa, FaCcMastercard, FaCreditCard, FaPaypal } from 'react-icons/fa';
 
 import Logo from "../assets/logo.jpg";
+
+const paymentMethods = [
+  { id: "yape", name: "Yape", icon: <img src={YapeIcon} alt="Yape" width={30} height={30} /> },
+  { id: "plin", name: "Plin", icon: <img src={PlinIcon} alt="Plin" width={30} height={30} /> },
+  { id: "visa", name: "Visa", icon: <FaCcVisa color="#1A1F71" size={30} /> },
+  { id: "mastercard", name: "Mastercard", icon: <FaCcMastercard color="#EB001B" size={30} /> },
+  { id: "paypal", name: "PayPal", icon: <FaPaypal color="#003087" size={30} /> },
+  { id: "credit_card", name: "Tarjeta de Crédito", icon: <FaCreditCard color="#FF5F00" size={30} /> },
+];
 
 const Paso3 = () => {
   const navigate = useNavigate();
@@ -31,10 +40,17 @@ const Paso3 = () => {
 
           <label className="payone-paso2-label">Cuenta Interbancaria</label>
           <span className="payone-paso2-label">1247894903739-928-09</span>
+
           <div className="payone-paso3-payment-methods-container">
-            <img src={YapeIcon} width={40} height={40} alt="Yape" />
-            <img src={PlinIcon} width={40} height={40} alt="Plin" />
+
+            {paymentMethods.map((method) => (
+              <div key={method.id} className="payone-paso3-payment-method">
+                {method.icon}
+              </div>
+            ))}
+            
           </div>
+
           <span className="payone-paso2-label-number">+51 957 271 213</span>
         </div>
       </div>

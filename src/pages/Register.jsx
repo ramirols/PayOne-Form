@@ -12,6 +12,7 @@ const RegisterSchema = Yup.object().shape({
   email: Yup.string().email("Correo inválido").required("Requerido"),
   phone: Yup.string().required("Requerido"),
   address: Yup.string(),
+  birth: Yup.date().required("Requerido"),
 });
 
 function Register() {
@@ -33,14 +34,19 @@ function Register() {
           {({ handleSubmit }) => (
             <Form className="payone-form" onSubmit={handleSubmit}>
               <div className="payone-input-group">
-                <label className="payone-label">Nombre</label>
+                <label className="payone-label">Nombres</label>
                 <Field type="text" name="name" className="payone-input" />
                 <ErrorMessage name="name" component="div" className="payone-error" />
               </div>
               <div className="payone-input-group">
-                <label className="payone-label">Apellido</label>
+                <label className="payone-label">Apellidos</label>
                 <Field type="text" name="lastname" className="payone-input" />
                 <ErrorMessage name="lastname" component="div" className="payone-error" />
+              </div>
+              <div className="payone-input-group">
+                <label className="payone-label">Fecha de nacimiento</label>
+                <Field type="date" name="birth" className="payone-input" />
+                <ErrorMessage name="birth" component="div" className="payone-error" />
               </div>
               <div className="payone-input-group">
                 <label className="payone-label">DNI</label>

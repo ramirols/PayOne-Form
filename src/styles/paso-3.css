@@ -91,3 +91,71 @@
         padding: 8px 16px;
     }
 }
+
+.payone-paso3-payment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3B3A96;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-select select option {
+    padding: 5px;
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: #3B3A96;
+}
+
+.payone-selected-method {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payone-selected-method strong {
+    color: #3B3A96;
+    font-weight: bold;
+}
+
+.payone-submit-btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payone-submit-btn:hover {
+    background: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

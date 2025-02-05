@@ -5,7 +5,7 @@ div#root {
 *,
 *::before,
 *::after {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inria Sans', sans-serif;
   box-sizing: border-box;
 }
 
@@ -87,8 +87,8 @@ label {
     height: 40px !important;
   }
 
-  .payone-paso3-step {
-    width: 60px !important;
-    height: 100px !important;
+  .payone-paso3-container {
+    margin: 50px 20px !important;
+    height: 980px !important; 
   }
 }
